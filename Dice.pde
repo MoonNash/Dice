@@ -11,7 +11,7 @@ void draw()
   for(int y = 25; y < 420; y = y + 45){
     for(int x = 25; x < 470; x = x + 50){
   Die sue = new Die(x, y);
-  sue.roll();
+  sue.boop();
   sue.show();
   sumDice = sumDice + sue.roll;
     }
@@ -32,13 +32,13 @@ class Die
     myY = y;
     roll = 0;
   }
-  void roll()
+  void boop()
   {
-    boop = (int)(Math.random()*6+1);
+    roll = (int)(Math.random()*6+1);
   }
   void show()
   {
-    if (boop == 6) {
+    if (roll == 6) {
       fill((int)(Math.random()*256),(int)(Math.random()*256),(int)(Math.random()*256));
       rect(myX, myY, 40, 40);
       fill((int)(Math.random()*256),(int)(Math.random()*256),(int)(Math.random()*256));
@@ -48,7 +48,7 @@ class Die
       ellipse(myX+30,myY+20,10,10);
       ellipse(myX+10,myY+32,10,10);
       ellipse(myX+30,myY+32,10,10);
-    } else if (boop == 5) {
+    } else if (roll == 5) {
       fill((int)(Math.random()*256),(int)(Math.random()*256),(int)(Math.random()*256));
       rect(myX, myY, 40, 40);
       fill((int)(Math.random()*256),(int)(Math.random()*256),(int)(Math.random()*256));
@@ -57,7 +57,7 @@ class Die
       ellipse(myX+20,myY+20,10,10);
       ellipse(myX+10,myY+32,10,10);
       ellipse(myX+30,myY+32,10,10);
-    } else if (boop == 4) {
+    } else if (roll == 4) {
       fill((int)(Math.random()*256),(int)(Math.random()*256),(int)(Math.random()*256));
       rect(myX, myY, 40, 40);
       fill((int)(Math.random()*256),(int)(Math.random()*256),(int)(Math.random()*256));
@@ -65,20 +65,20 @@ class Die
       ellipse(myX+30,myY+8,9,9);
       ellipse(myX+10,myY+28,9,9);
       ellipse(myX+30,myY+28,9,9);
-    } else if (boop == 3) {
+    } else if (roll == 3) {
       fill((int)(Math.random()*256),(int)(Math.random()*256),(int)(Math.random()*256));
       rect(myX, myY, 40, 40);
       fill((int)(Math.random()*256),(int)(Math.random()*256),(int)(Math.random()*256));
       ellipse(myX+10,myY+8,10,10);
       ellipse(myX+20,myY+20,10,10);
       ellipse(myX+30,myY+32,10,10);
-    } else if (boop == 2){
+    } else if (roll == 2){
       fill((int)(Math.random()*256),(int)(Math.random()*256),(int)(Math.random()*256));
       rect(myX, myY, 40, 40);
       fill((int)(Math.random()*256),(int)(Math.random()*256),(int)(Math.random()*256));
       ellipse(myX+10,myY+8,10,10);
       ellipse(myX+30,myY+32,10,10);
-    }else if (boop == 1){
+    }else if (roll == 1){
       fill((int)(Math.random()*256),(int)(Math.random()*256),(int)(Math.random()*256));
       rect(myX, myY, 40, 40);
       fill((int)(Math.random()*256),(int)(Math.random()*256),(int)(Math.random()*256));
